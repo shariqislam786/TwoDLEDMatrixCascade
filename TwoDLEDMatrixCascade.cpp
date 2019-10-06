@@ -91,7 +91,6 @@ void TwoDLEDMatrixCascade::setColumn(int col, uint8_t values[]) {
   getDeviceIndexesInaColumn(col, devices);
   col = col % 8;
   for (int i = 0; i < numRowDevices; i++) {
-    Serial.println(devices[i]);
     switch (rotations[devices[i]] % 4) {
       case 0:
         ledControlRef.setColumn(devices[i], col, values[i]);
